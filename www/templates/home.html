@@ -1,0 +1,28 @@
+<ion-view ng-controller="homeCtrl">
+<ion-header-bar align-title="center" class="bar-stable">
+	<h1 class="title">{{obj.title}}</h1>
+</ion-header-bar>
+<ion-content>
+<div class="rootDiv">
+<ion-item-group>
+	<ion-item class="header">Title</ion-item>
+	<ion-item><input type="text" ng-model="obj.title"></input></ion-item>
+
+	<ion-item class="header">Description</ion-item>
+	<ion-item><textarea ng-change="text(obj.desc)" rows="6" ng-model="obj.desc"></textarea></ion-item>
+
+	<ion-item class="header" radio-group="priority" class="item item-divider">Priority</ion-item>
+	<ion-radio ng-model="obj.priority" ng-value="'high'" ng-click="setPri(obj.priority)">High</ion-radio>
+	<ion-radio ng-model="obj.priority" ng-value="'medium'" ng-click="setPri(obj.priority)">Medium</ion-radio>
+	<ion-radio ng-model="obj.priority" ng-value="'low'" ng-click="setPri(obj.priority)">Low</ion-radio>
+
+	<ion-item class="header">Complete</ion-item>
+	<ion-toggle ng-model="obj.complete" toggle-class="toggle-calm">Complete</ion-toggle>
+</ion-item-group>
+
+	<button ng-if="save==true" ng-click="post()" class="button button-positive">Save</button>
+	<button ng-if="update==true" ng-click="put()" class="button button-positive">Update</button>
+	<button ng-if="delete==true" ng-click="remove()" class="button button-positive">Delete</button>
+</div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+/* Empty. Add your own CSS if you like */
+.rootDiv {
+	margin: 10px;
+}
+
+.header {
+	background-color: lightblue;
+	font-weight: bold;
+	font-size: large; 
+}
+
+input[type="text"] { 
+	border: 1px solid black;
+}
+
+textarea {
+	margin: 10px;
+	border: 1px solid black;
+}
+
+.button-positive {
+	margin: 10px;
+}
